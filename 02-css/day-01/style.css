@@ -3,6 +3,17 @@ h2 {
     font-size: 24px;
 }
 
+h1 {
+    color: red;
+    text-align: center;
+}
+
+button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
 /* Class Selector */
 .box {
     background-color: black;
@@ -25,4 +36,4 @@ p, h4 {
 body {
     background-color: #f5f5f5;
     font-family: Arial;
-}
+} 
