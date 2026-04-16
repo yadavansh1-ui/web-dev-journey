@@ -1,0 +1,46 @@
+/* Background */
+body {
+    background-color: #121212;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* Colors */
+h1 {
+    color: red;                /* Named color */
+}
+
+#heading {
+    color: rgb(0, 255, 0);     /* RGB */
+}
+
+/* HEX color */
+.text1 {
+    color: #00ffcc;
+}
+
+/* RGBA */
+.text2 {
+    color: rgba(255, 0, 0, 0.5);
+}
+
+/* HSL */
+.text3 {
+    color: hsl(200, 100%, 50%);
+}
+
+/* Font Styles */
+.text1 {
+    font-size: 18px;
+}
+
+.text2 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.text3 {
+    font-size: 20px;
+    font-style: italic;
+    font-family: "Courier New", monospace;
+}
