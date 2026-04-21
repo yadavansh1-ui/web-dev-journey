@@ -1,0 +1,31 @@
+body {
+    font-size: 16px;
+}
+
+/* px */
+.box1 {
+    width: 200px;
+    background: red;
+}
+
+/* % */
+.box2 {
+    width: 50%;
+    background: green;
+}
+
+/* vw */
+.box3 {
+    width: 50vw;
+    background: blue;
+}
+
+/* rem */
+.text1 {
+    font-size: 2rem;
+}
+
+/* em */
+.text2 {
+    font-size: 2em;
+}
