@@ -1,0 +1,35 @@
+/* Base box style */
+.box {
+    width: 100px;
+    height: 100px;
+    background: red;
+    margin: 10px;
+}
+
+/* Push element to left and allow text/other elements to wrap */
+.left {
+    float: left;
+}
+
+/* Push element to right */
+.right {
+    float: right;
+}
+
+/* Stops floating effect and forces next element below */
+.clear {
+    clear: both;
+}
+
+/* Demonstrates overflow behavior */
+.overflow-box {
+    width: 200px;
+    height: 100px;
+    background: blue;
+    color: white;
+
+    /* Try changing this: hidden | scroll | auto */
+    overflow: auto;
+
+    margin-top: 20px;
+}
