@@ -1,0 +1,76 @@
+body {
+  font-family: Arial;
+  background: #111;
+  color: white;
+}
+
+h2 {
+  margin-top: 30px;
+}
+
+/* common container */
+.container {
+  display: flex;
+  background: #222;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* box */
+.box {
+  width: 80px;
+  height: 80px;
+  background: red;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* center both directions */
+.center {
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+/* horizontal spacing */
+.space {
+  justify-content: space-between;
+}
+
+/* vertical alignment */
+.align {
+  align-items: center;
+  height: 120px;
+}
+
+/* column layout */
+.column {
+  flex-direction: column;
+}
+
+/* wrapping */
+.wrap {
+  flex-wrap: wrap;
+  width: 200px;
+}
+
+/* grow */
+.grow1 {
+  flex-grow: 1;
+}
+
+.grow2 {
+  flex-grow: 2;
+}
+
+/* overflow */
+.overflow-box {
+  width: 200px;
+  height: 100px;
+  background: blue;
+  margin-top: 10px;
+  overflow: auto;
+  padding: 10px;
+}
