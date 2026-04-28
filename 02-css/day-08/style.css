@@ -1,0 +1,47 @@
+body {
+  font-family: Arial;
+  background: #111;
+  color: white;
+}
+
+/* Default (Desktop) */
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .container {
+    justify-content: space-around;
+  }
+
+  .box {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    width: 70px;
+    height: 70px;
+    margin: 10px 0;
+  }
+}
