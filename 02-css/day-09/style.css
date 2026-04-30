@@ -1,0 +1,43 @@
+body {
+  font-family: Arial;
+  background: #111;
+  color: white;
+  padding: 20px;
+}
+
+/* base card */
+.card {
+  width: 220px;
+  padding: 20px;
+  margin: 20px 0;
+  background: #222;
+  border-radius: 10px;
+}
+
+/* soft shadow (used in UI) */
+.soft {
+  box-shadow: 0 4px 12px rgba(239, 89, 89, 0.2);
+}
+
+/* deeper shadow */
+.deep {
+  box-shadow: 0 10px 25px rgba(239, 100, 100, 0.4);
+}
+
+/* inset shadow */
+.inset {
+  box-shadow: inset 2px 2px 8px #ef6b6299;
+}
+
+/* multiple shadows */
+.multi {
+  box-shadow:
+    0 2px 5px rgba(244, 78, 78, 0.2),
+    0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* text shadow */
+.text {
+  margin-top: 30px;
+  text-shadow: 2px 2px 6px rgb(246, 95, 95);
+}
