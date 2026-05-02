@@ -2,40 +2,66 @@ body {
   font-family: Arial;
   background: #111;
   color: white;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   padding: 20px;
 }
 
-/* Button */
-.btn {
-  padding: 10px 20px;
-  border: none;
+.box {
+  width: 120px;
+  height: 120px;
   background: red;
-  color: white;
-  cursor: pointer;
-
-  /* transition controls animation */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: all 0.3s ease;
 }
 
-/* hover effect */
-.btn:hover {
+/* 1. Background transition */
+.bg:hover {
   background: black;
-  transform: scale(1.1);
 }
 
-/* Card */
-.card {
-  width: 200px;
-  padding: 20px;
-  margin-top: 20px;
-  background: #222;
-  border-radius: 10px;
-
-  transition: all 0.3s ease;
+/* 2. Scale */
+.scale:hover {
+  transform: scale(1.2);
 }
 
-/* hover */
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+/* 3. Move */
+.move:hover {
+  transform: translateX(30px);
+}
+
+/* 4. Rotate */
+.rotate:hover {
+  transform: rotate(20deg);
+}
+
+/* 5. Shadow */
+.shadow:hover {
+  box-shadow: 0 10px 20px rgba(240, 240, 238, 0.5);
+}
+
+/* 6. Opacity */
+.opacity:hover {
+  opacity: 0.5;
+}
+
+/* 7. Border radius */
+.border:hover {
+  border-radius: 50%;
+}
+
+/* 8. Multiple properties */
+.multi {
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.multi:hover {
+  transform: scale(1.2);
+  background: blue;
 }
