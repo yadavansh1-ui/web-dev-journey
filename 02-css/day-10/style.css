@@ -1,0 +1,41 @@
+body {
+  font-family: Arial;
+  background: #111;
+  color: white;
+  padding: 20px;
+}
+
+/* Button */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  background: red;
+  color: white;
+  cursor: pointer;
+
+  /* transition controls animation */
+  transition: all 0.3s ease;
+}
+
+/* hover effect */
+.btn:hover {
+  background: black;
+  transform: scale(1.1);
+}
+
+/* Card */
+.card {
+  width: 200px;
+  padding: 20px;
+  margin-top: 20px;
+  background: #222;
+  border-radius: 10px;
+
+  transition: all 0.3s ease;
+}
+
+/* hover */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
