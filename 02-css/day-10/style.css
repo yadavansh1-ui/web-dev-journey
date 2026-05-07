@@ -14,7 +14,7 @@ body {
 .box {
   width: 120px;
   height: 120px;
-  background: red;
+  background: rgb(236, 145, 145);
   display: flex;
   justify-content: center;
   align-items: center;
