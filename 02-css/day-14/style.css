@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #111;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 40px;
+
+  /* creates depth */
+  perspective: 1000px;
+}
+
+/* card */
+.card {
+  width: 250px;
+  padding: 25px;
+  background: #222;
+  border-radius: 12px;
+
+  transition: 0.4s ease;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+
+  transform-style: preserve-3d;
+}
+
+/* hover interaction */
+.card:hover {
+
+  transform:
+    rotateY(15deg)
+    rotateX(10deg)
+    translateY(-10px)
+    scale(1.05);
+
+  box-shadow: 0 20px 30px rgba(0,0,0,0.5);
+}
