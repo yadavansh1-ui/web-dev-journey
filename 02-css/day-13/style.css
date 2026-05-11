@@ -1,0 +1,49 @@
+body {
+  font-family: Arial;
+  background: #111;
+  color: white;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 40px;
+
+  /* depth */
+  perspective: 1000px;
+}
+
+.box {
+  width: 140px;
+  height: 140px;
+  background: red;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.4s ease;
+
+  transform-style: preserve-3d;
+}
+
+/* rotate on X axis */
+.rotateX:hover {
+  transform: rotateX(60deg);
+}
+
+/* rotate on Y axis */
+.rotateY:hover {
+  transform: rotateY(60deg);
+}
+
+/* depth movement */
+.translateZ:hover {
+  transform: translateZ(100px);
+}
+
+/* 3D scale */
+.scale3d:hover {
+  transform: scale3d(1.2, 1.2, 1.2);
+}
