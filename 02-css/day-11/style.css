@@ -3,18 +3,19 @@ body {
   background: #111;
   color: white;
   padding: 20px;
+  
 }
 
 .box {
   width: 100px;
   height: 100px;
-  background: red;
+  background: rgb(239, 93, 93);
   margin: 20px;
 }
 
-/* =========================
+/* 
    1. MOVE ANIMATION
-   ========================= */
+   = */
 .move {
   animation: moveBox 2s infinite;
 }
