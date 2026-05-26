@@ -1,54 +1,84 @@
-// console output
-console.log("JavaScript Day 1");
+// global scope
+let user = "Ansh";
 
-/* variables */
-let name = "Ansh";
-const age = 21;
-var city = "Moradabad";
+console.log(user);
 
-console.log(name);
-console.log(age);
+function showUser() {
+  console.log(user);
+}
+
+showUser();
+
+// function scope
+function testScope() {
+
+  let message = "Inside function";
+
+  console.log(message);
+}
+
+testScope();
+
+// block scope
+{
+  let blockVariable = "Block scope";
+  console.log(blockVariable);
+}
+
+// lexical scope
+function outer() {
+
+  let outerVariable = "Outer";
+
+  function inner() {
+    console.log(outerVariable);
+  }
+
+  inner();
+}
+
+outer();
+
+// var hoisting
 console.log(city);
 
-/* data types */
-let language = "JavaScript";   // string
-let marks = 95;                // number
-let isLearning = true;         // boolean
-let futureGoal = null;         // null
-let skill;                     // undefined
+var city = "Moradabad";
 
-console.log(typeof language);
-console.log(typeof marks);
-console.log(typeof isLearning);
-console.log(typeof futureGoal);
-console.log(typeof skill);
+// let hoisting
+// console.log(age);
 
-/* operators */
+let age = 21;
+
+// function hoisting
+greet();
+
+function greet() {
+  console.log("Hello");
+}
+
+// execution context example
 let a = 10;
-let b = 5;
 
-console.log(a + b);
-console.log(a - b);
-console.log(a * b);
-console.log(a / b);
+function demo() {
 
-/* type conversion */
-let score = "100";
+  let b = 20;
 
-console.log(Number(score));
-console.log(String(50));
+  console.log(a + b);
+}
 
-/* type coercion */
-console.log("5" + 1); // string
-console.log("5" - 1); // number
+demo();
 
-/* browser interaction */
-alert("Welcome to JavaScript!");
+// call stack example
+function first() {
+  second();
+}
 
-let userName = prompt("Enter your name:");
+function second() {
+  third();
+}
 
-console.log(userName);
+function third() {
+  console.log("Call stack executed");
+}
 
-let result = confirm("Are you enjoying JavaScript?");
-
-console.log(result);
+first();

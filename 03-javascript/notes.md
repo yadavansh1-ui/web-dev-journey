@@ -1,181 +1,195 @@
-# JavaScript Day 1 – Basics
+# JavaScript Day 6 – Scope and Hoisting
 
-## 1. What is JavaScript?
+## 1. What is Scope?
 
-JavaScript is a programming language used to make websites interactive.
-
-Examples:
-- button clicks
-- animations
-- form validation
-- dynamic content
+Scope decides where variables can be accessed.
 
 ---
 
-## 2. How JavaScript Works
+# TYPES OF SCOPE
 
-Browser reads JavaScript using a JS engine.
+## 2. Global Scope
+
+Variable accessible everywhere.
 
 Example:
-Chrome → V8 Engine
-
----
-
-## 3. Script Tag
-
-Used to connect JavaScript file.
-
-Example:
-
-<script src="script.js"></script>
-
-Usually added before closing body tag.
-
----
-
-## 4. console.log()
-
-Used to print output in browser console.
-
-Example:
-
-console.log("Hello");
-
----
-
-## 5. Comments
-
-Single line:
-```javascript
-// comment
-```
-
-Multi line:
-```javascript
-/* comment */
-```
-
----
-
-## 6. Variables
-
-Variables store data.
-
-### var
-Old way.
-Function scoped.
-
-### let
-Modern way.
-Can change value.
-
-### const
-Value cannot be reassigned.
-
----
-
-## 7. Data Types
-
-### String
-Text data.
 
 ```javascript
 let name = "Ansh";
 ```
 
-### Number
+Accessible:
+- inside functions
+- outside functions
+
+---
+
+## 3. Function Scope
+
+Variables declared inside function
+can only be used inside that function.
+
+Example:
 
 ```javascript
-let age = 21;
+function test() {
+  let msg = "Hello";
+}
 ```
 
-### Boolean
+---
+
+## 4. Block Scope
+
+Variables inside {} only work inside block.
+
+Works with:
+- let
+- const
+
+Example:
 
 ```javascript
-true / false
+{
+  let age = 21;
+}
 ```
 
-### Undefined
-
-Variable declared but no value.
-
-### Null
-
-Intentional empty value.
-
 ---
 
-## 8. typeof
+## 5. Lexical Scope
 
-Used to check data type.
+Inner function can access variables
+from outer function.
 
 Example:
 
-typeof "hello"
+```javascript
+function outer() {
+
+  let a = 10;
+
+  function inner() {
+    console.log(a);
+  }
+
+}
+```
 
 ---
 
-## 9. Operators
+# HOISTING
 
-Arithmetic operators:
-- +
-- -
-- *
-- /
+## 6. What is Hoisting?
+
+JavaScript moves declarations to top internally.
 
 ---
 
-## 10. Type Conversion
+## 7. var Hoisting
 
-Manual conversion.
+var becomes:
+
+```javascript
+undefined
+```
+
+before initialization.
 
 Example:
 
-Number("100")
+```javascript
+console.log(city);
 
-String(50)
+var city = "Delhi";
+```
 
 ---
 
-## 11. Type Coercion
+## 8. let and const Hoisting
 
-JavaScript automatically converts values sometimes.
+They are hoisted too,
+but stay inside:
+
+```text
+Temporal Dead Zone (TDZ)
+```
+
+Access before declaration gives error.
+
+---
+
+## 9. Function Hoisting
+
+Function declarations are fully hoisted.
 
 Example:
 
-"5" + 1 → "51"
+```javascript
+greet();
 
-"5" - 1 → 4
+function greet() {}
+```
 
----
-
-## 12. Input / Output
-
-### alert()
-
-Shows popup.
-
-### prompt()
-
-Takes input from user.
-
-### confirm()
-
-Returns true or false.
+Works correctly.
 
 ---
 
-## 13. Quick Revision
+# EXECUTION CONTEXT
 
-console.log → output  
-let → changeable variable  
-const → fixed variable  
-typeof → checks type  
+## 10. What is Execution Context?
+
+Environment where JavaScript code runs.
+
+Contains:
+- variables
+- functions
+- scope information
 
 ---
 
-## 14. One Line Understanding
+# CALL STACK
 
-JavaScript adds logic and interaction to websites.
+## 11. What is Call Stack?
+
+Tracks function execution order.
+
+Last called function executes first.
+
+LIFO:
+Last In First Out
+
+---
+
+## 12. Important Understanding
+
+Scope controls accessibility.
+
+Hoisting controls declaration behavior.
+
+---
+
+## 13. Common Mistakes
+
+- using variable before declaration
+- confusing var and let
+- scope confusion inside functions
+
+---
+
+## 14. Quick Revision
+
+global → everywhere  
+function scope → inside function  
+block scope → inside {}  
+hoisting → declarations move up  
+call stack → function execution order  
+
+---
+
+## 15. One Line Understanding
+
+Scope controls access.  
+Hoisting controls initialization behavior.
 
 ---
